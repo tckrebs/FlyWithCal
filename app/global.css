@@ -18,7 +18,7 @@ a {
 /* Blocky outline around each letter, one font-pixel thick (Press Start 2P is
    drawn on an 8px grid, so 0.125em lines up with the letters' pixels). */
 .text-outline {
-  --outline-color: #1f3fbf;
+  --outline-color: #111010;
   --o: 0.09375em;
   text-shadow:
     calc(-1 * var(--o)) calc(-1 * var(--o)) 0 var(--outline-color),

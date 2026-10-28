@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Metadata } from "next";
 import { JsonLd } from "./components/JsonLd";
 import { PixelClouds } from "./components/PixelClouds";
@@ -43,8 +44,18 @@ export default function HomePage() {
         }}
       />
       <div>
-        <h1 className="font-display-header text-outline text-4xl/normal md:text-5xl/normal">
-          {SITE_NAME}
+        {/* Pixel-art title image; its alt text keeps the heading readable for
+            search engines and screen readers. */}
+        <h1>
+          <Image
+            alt={SITE_NAME}
+            className="h-auto w-full max-w-[610px] [image-rendering:pixelated]"
+            height={36}
+            priority
+            src="/fly_with_cal_title.png"
+            unoptimized
+            width={305}
+          />
         </h1>
         <p className="mt-8 text-lg leading-relaxed text-neutral-300">
           {SITE_DESCRIPTION}
