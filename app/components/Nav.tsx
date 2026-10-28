@@ -10,7 +10,7 @@ import { cx } from "../../utils/formatters";
 const HIDE_AFTER = 80;
 
 const LINK_CLASSES =
-  "transition-[background-color,opacity] duration-75 py-1 px-2 hover:bg-[#020fc7]";
+  "py-1 px-2 underline decoration-transparent decoration-[3px] underline-offset-8 transition-colors duration-150 hover:decoration-[#020fc7]";
 
 export const Nav = () => {
   const [hidden, setHidden] = useState(false);
@@ -44,6 +44,9 @@ export const Nav = () => {
         <div className="flex items-center gap-4">
           <Link href={ROUTES.about} className={LINK_CLASSES}>
             {ROUTE_LABELS.about}
+          </Link>
+          <Link href={ROUTES.faq} className={LINK_CLASSES}>
+            {ROUTE_LABELS.faq}
           </Link>
           <Link
             href={ROUTES.contact}

@@ -29,6 +29,7 @@ export type RouteName = keyof typeof ROUTES;
 export const ROUTES = {
   home: "/",
   about: "/about",
+  faq: "/faq",
   contact: "/contact",
 };
 
@@ -36,6 +37,7 @@ export const ROUTES = {
 export const ROUTE_LABELS: Record<RouteName, string> = {
   home: "Fly with Cal",
   about: "About",
+  faq: "FAQ",
   contact: "Contact",
 };
 
