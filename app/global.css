@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background-color: #020fc7;
+  color: #fefefe;
+}
+
+html {
+  min-width: 360px;
+}
+
+a {
+  @apply transition-all decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+}

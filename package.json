@@ -1,0 +1,28 @@
+{
+  "name": "flywithcal",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "preview": "npx serve out"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "christian-kohler.path-intellisense", // autocomplete filepaths in editor
+    "christian-kohler.npm-intellisense", // import npm modules into source code
+    "bradlc.vscode-tailwindcss", // tailwind css intellisense
+    "EditorConfig.EditorConfig", // editorconfig https://editorconfig.org/
+    "ms-vscode.vscode-typescript-next", // syntax highlighting for .ts|.tsx files
+    "vunguyentuan.vscode-css-variables", // autocomplete css variables
+  ]
+}
