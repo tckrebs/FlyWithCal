@@ -38,7 +38,7 @@ export const ROUTE_LABELS: Record<RouteName, string> = {
   home: "Fly with Cal",
   about: "About",
   faq: "FAQ",
-  contact: "Contact",
+  contact: "Get in touch",
 };
 
 export function getRouteURL(routeName: RouteName) {

@@ -9,7 +9,7 @@ const SOCIALS = [
 export function Footer() {
   return (
     <footer className="border-t border-zinc-800">
-      <div className="flex items-center justify-between w-full max-w-6xl mx-auto px-6 md:px-10 py-4">
+      <div className="flex items-center justify-between w-full max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-24">
         <span className="text-xs text-zinc-500">
           © {new Date().getFullYear()} {SITE_NAME}
         </span>

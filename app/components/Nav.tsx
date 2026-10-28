@@ -10,7 +10,7 @@ import { cx } from "../../utils/formatters";
 const HIDE_AFTER = 80;
 
 const LINK_CLASSES =
-  "py-1 px-2 underline decoration-transparent decoration-[3px] underline-offset-8 transition-colors duration-150 hover:decoration-[#020fc7]";
+  "inline-flex items-center justify-center leading-none whitespace-nowrap py-1 px-2 underline decoration-transparent decoration-[3px] underline-offset-8 transition-colors duration-150 hover:decoration-[#020fc7]";
 
 export const Nav = () => {
   const [hidden, setHidden] = useState(false);
@@ -37,11 +37,17 @@ export const Nav = () => {
         hidden && "-translate-y-full",
       ])}
     >
-      <nav className="flex h-full items-center justify-between w-full max-w-6xl mx-auto px-6 md:px-10">
-        <Link href={ROUTES.home} className={cx(["-ml-2", LINK_CLASSES])}>
-          {ROUTE_LABELS.home}
+      <nav className="flex h-full items-center justify-between w-full max-w-6xl mx-auto px-6 md:px-10 text-sm sm:text-base">
+        {/* On small screens only the plane shows; the hero already has the name. */}
+        <Link
+          aria-label={ROUTE_LABELS.home}
+          className={cx(["-ml-2 gap-2", LINK_CLASSES])}
+          href={ROUTES.home}
+        >
+          <span aria-hidden>✈️</span>
+          <span className="hidden sm:inline">{ROUTE_LABELS.home}</span>
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-1 sm:gap-4">
           <Link href={ROUTES.about} className={LINK_CLASSES}>
             {ROUTE_LABELS.about}
           </Link>
@@ -50,7 +56,7 @@ export const Nav = () => {
           </Link>
           <Link
             href={ROUTES.contact}
-            className="rounded-full bg-white px-5 py-2 text-[#111010] transition-colors duration-150 hover:bg-neutral-200"
+            className="inline-flex items-center justify-center leading-none whitespace-nowrap rounded-full bg-white px-4 sm:px-5 py-2.5 text-[#111010] transition-shadow duration-200 hover:shadow-[0_0_0_3px_#020fc7,0_0_20px_#020fc7]"
           >
             {ROUTE_LABELS.contact}
           </Link>
