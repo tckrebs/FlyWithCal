@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::selection {
-  background-color: #020fc7;
+  background-color: #1f3fbf;
   color: #fefefe;
 }
 
@@ -13,4 +13,26 @@ html {
 
 a {
   @apply transition-all decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+}
+
+/* Blocky outline around each letter, one font-pixel thick (Press Start 2P is
+   drawn on an 8px grid, so 0.125em lines up with the letters' pixels). */
+.text-outline {
+  --outline-color: #1f3fbf;
+  --o: 0.09375em;
+  text-shadow:
+    calc(-1 * var(--o)) calc(-1 * var(--o)) 0 var(--outline-color),
+    0 calc(-1 * var(--o)) 0 var(--outline-color),
+    var(--o) calc(-1 * var(--o)) 0 var(--outline-color),
+    calc(-1 * var(--o)) 0 0 var(--outline-color),
+    var(--o) 0 0 var(--outline-color),
+    calc(-1 * var(--o)) var(--o) 0 var(--outline-color),
+    0 var(--o) 0 var(--outline-color),
+    var(--o) var(--o) 0 var(--outline-color);
+}
+
+/* Heavier pixel letters: Press Start 2P has a single weight, so thicken each
+   letter with a stroke in its own colour instead of a browser-faked bold. */
+.text-bold-pixel {
+  -webkit-text-stroke: 0.0625em currentColor;
 }

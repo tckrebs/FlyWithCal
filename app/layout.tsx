@@ -1,7 +1,7 @@
 import "./global.css";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
-import { Bruno_Ace, Nunito } from "next/font/google";
+import { Nunito, Press_Start_2P, Silkscreen } from "next/font/google";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "../utils/config";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
@@ -65,12 +65,20 @@ const nunito = Nunito({
   variable: "--font-body",
 });
 
-// Decorative font for headings and other display text.
-const brunoAce = Bruno_Ace({
+// Decorative font for headings.
+const pressStart2P = Press_Start_2P({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
-  variable: "--font-bruno-ace",
+  variable: "--font-display-header",
+});
+
+// Decorative font for other display text.
+const silkscreen = Silkscreen({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-display",
 });
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -80,11 +88,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
       className={cx([
         nunito.className,
         nunito.variable,
-        brunoAce.variable,
+        silkscreen.variable,
+        pressStart2P.variable,
         "text-white bg-[#111010]",
       ])}
     >
-      <body className="antialiased min-h-dvh flex flex-col">
+      <body className="antialiased min-h-dvh flex flex-col overflow-x-clip">
         <Nav />
         {/* pt-20 leaves room for the fixed header. */}
         <main className="flex-1 w-full max-w-6xl mx-auto px-6 md:px-10 pt-20">

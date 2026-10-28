@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { JsonLd } from "./components/JsonLd";
+import { PixelClouds } from "./components/PixelClouds";
+import { PixelPlane } from "./components/PixelPlane";
 import {
   EMPLOYER,
   JOB_TITLE,
@@ -17,7 +19,10 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     // Hero fills the screen below the header
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center min-h-[calc(100dvh-5rem)] py-16">
+    <section className="relative isolate grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center min-h-[calc(100dvh-5rem)] py-16">
+      <PixelClouds layer="back" />
+      <PixelPlane />
+      <PixelClouds layer="front" />
       <JsonLd
         data={{
           "@type": "Person",
@@ -38,7 +43,7 @@ export default function HomePage() {
         }}
       />
       <div>
-        <h1 className="font-display font-bold text-5xl md:text-7xl leading-tight">
+        <h1 className="font-display-header text-outline text-4xl/normal md:text-5xl/normal">
           {SITE_NAME}
         </h1>
         <p className="mt-8 text-lg leading-relaxed text-neutral-300">

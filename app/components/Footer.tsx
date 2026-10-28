@@ -8,15 +8,20 @@ const SOCIALS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-800">
+    <footer className="bg-[#2f7a24]">
+      {/* Pixel-grass strip along the top edge, tiled from public/grass_edge.svg. */}
+      <div
+        aria-hidden
+        className="h-4 bg-[url(/grass_edge.svg)] bg-repeat-x [background-size:32px_16px] [image-rendering:pixelated]"
+      />
       <div className="flex items-center justify-between w-full max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-24">
-        <span className="text-xs text-zinc-500">
+        <span className="text-xs text-white">
           © {new Date().getFullYear()} {SITE_NAME}
         </span>
-        <div className="flex gap-3 text-neutral-300 align-bottom dark:text-neutral-300">
+        <div className="flex gap-3 align-bottom">
           {SOCIALS.map(({ href, icon }) => (
             <a
-              className="flex items-end text-neutral-600 hover:text-neutral-100 transition-all"
+              className="flex items-end text-white hover:text-[#ffe36b] transition-all"
               href={href}
               key={href}
               rel="noopener noreferrer"
