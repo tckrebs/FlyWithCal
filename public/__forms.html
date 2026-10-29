@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- Registers the contact form with Netlify Forms at deploy time. The real form
+     (app/components/ContactForm.tsx) posts here; keep the field names in sync. -->
+<html>
+  <body>
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="firstName" />
+      <input name="lastName" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>

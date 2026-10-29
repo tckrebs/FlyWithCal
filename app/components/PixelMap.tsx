@@ -68,7 +68,7 @@ function GoogleMap() {
   return (
     <a
       aria-label={`Directions to ${LESSON_LOCATION.name}`}
-      className="group relative block border-4 border-[#111010] outline outline-2 outline-white"
+      className="group relative block overflow-hidden rounded-xl border-4 border-[#111010] outline outline-2 outline-white"
       href={LESSON_LOCATION.directionsUrl}
       rel="noopener noreferrer"
       style={{ width: MAP_WIDTH * DISPLAY_SCALE, maxWidth: "100%" }}

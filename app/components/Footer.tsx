@@ -38,7 +38,7 @@ export function Footer() {
 
           <Link
             href={ROUTES.contact}
-            className="font-display mt-6 inline-flex items-center justify-center leading-none whitespace-nowrap rounded-full bg-white px-4 sm:px-5 py-2.5 text-[#111010] transition-colors duration-200 hover:bg-[#ffe36b] hover:text-[#111010]"
+            className="font-display mt-6 inline-flex items-center justify-center leading-none whitespace-nowrap rounded-full bg-[#2f7a24] px-4 sm:px-5 py-2.5 text-white shadow-[inset_0_0_0_2px_white] transition-[color,background-color,box-shadow] duration-200 hover:bg-[#ffe36b] hover:text-[#111010] hover:shadow-[inset_0_0_0_2px_#111010]"
           >
             {ROUTE_LABELS.contact}
           </Link>

@@ -8,10 +8,13 @@ import {
   JOB_TITLE,
   LOCATION,
   PROFILE_LINKS,
+  ROUTE_LABELS,
+  ROUTES,
   SITE_DESCRIPTION,
   SITE_NAME,
   SITE_URL,
 } from "../utils/config";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -60,6 +63,20 @@ export default function HomePage() {
         <p className="mt-8 text-lg leading-relaxed text-neutral-300">
           {SITE_DESCRIPTION}
         </p>
+        <div className="inline-flex gap-4">
+          <Link
+            href={ROUTES.about}
+            className="font-display mt-6 inline-flex items-center justify-center leading-none whitespace-nowrap rounded-full bg-[#111010] px-4 sm:px-5 py-2.5 text-white shadow-[inset_0_0_0_2px_white] transition-colors duration-200 hover:bg-[#1f3fbf]"
+          >
+            {ROUTE_LABELS.about}
+          </Link>
+          <Link
+            href={ROUTES.contact}
+            className="font-display mt-6 inline-flex items-center justify-center leading-none whitespace-nowrap rounded-full bg-white px-4 sm:px-5 py-2.5 text-[#111010] transition-colors duration-200 hover:bg-[#1f3fbf] hover:text-white"
+          >
+            {ROUTE_LABELS.contact}
+          </Link>
+        </div>
       </div>
       {/* TODO: Image goes here, in the right column. */}
       <div />
