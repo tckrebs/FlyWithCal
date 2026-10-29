@@ -16,6 +16,15 @@ export const LOCATION = {
   country: "US",
 };
 
+// Where lessons take place; shown on the footer map.
+export const LESSON_LOCATION = {
+  name: "McClellan-Palomar Airport (CRQ)",
+  lat: 33.1283,
+  lng: -117.28,
+  directionsUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=McClellan-Palomar+Airport+Carlsbad+CA",
+};
+
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/your-handle/",
   linkedin: "https://www.linkedin.com/in/your-handle/",

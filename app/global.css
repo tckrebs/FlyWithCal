@@ -7,6 +7,12 @@
   color: #fefefe;
 }
 
+/* Yellow highlight in the green footer, where the blue would blend in. */
+footer ::selection {
+  background-color: #ffe36b;
+  color: #111010;
+}
+
 html {
   min-width: 360px;
 }
