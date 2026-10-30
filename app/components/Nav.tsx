@@ -67,12 +67,15 @@ export const Nav = () => {
           <Link href={ROUTES.about} className={LINK_CLASSES}>
             {ROUTE_LABELS.about}
           </Link>
+          <Link href={ROUTES.gallery} className={LINK_CLASSES}>
+            {ROUTE_LABELS.gallery}
+          </Link>
           <Link href={ROUTES.faq} className={LINK_CLASSES}>
             {ROUTE_LABELS.faq}
           </Link>
           <Link
             href={ROUTES.contact}
-            className="inline-flex items-center justify-center leading-none whitespace-nowrap rounded-full bg-white px-4 sm:px-5 py-2.5 text-[#111010] transition-colors duration-200 hover:bg-[#1f3fbf] hover:text-white"
+            className="inline-flex items-center justify-center leading-none whitespace-nowrap rounded-full bg-white px-4 sm:px-5 py-2.5 text-[#111010] transition-[background-color,color] duration-150 ease-out hover:bg-[#1f3fbf] hover:text-white"
           >
             {ROUTE_LABELS.contact}
           </Link>
