@@ -62,7 +62,7 @@ function Cloud({ grid, className }: { grid: string[]; className: string }) {
   );
 }
 
-type Layer = "back" | "front";
+type Layer = "back" | "front" | "sky";
 
 // Placed around the edges so they stay clear of the hero text. "front" clouds
 // render above the plane and "back" clouds below it, so it weaves between them.
@@ -72,6 +72,12 @@ const CLOUDS: { grid: string[]; className: string; layer: Layer }[] = [
   { grid: PUFF, className: "top-[46%] right-[4%] motion-safe:animate-drift-slow", layer: "front" },
   { grid: BANK, className: "bottom-[10%] left-[10%] motion-safe:animate-drift", layer: "front" },
   { grid: PUFF, className: "bottom-[22%] left-[62%] motion-safe:animate-drift-slow", layer: "back" },
+  // Clouds for the blue sky section further down the home page.
+  { grid: BANK, className: "top-[12%] left-[2%] motion-safe:animate-drift-slow", layer: "sky" },
+  { grid: PUFF, className: "top-[22%] right-[6%] motion-safe:animate-drift", layer: "sky" },
+  { grid: PUFF, className: "top-[52%] left-[44%] motion-safe:animate-drift-slow", layer: "sky" },
+  { grid: BANK, className: "bottom-[18%] right-[2%] motion-safe:animate-drift", layer: "sky" },
+  { grid: PUFF, className: "bottom-[8%] left-[8%] motion-safe:animate-drift-slow", layer: "sky" },
 ];
 
 // Full-width cloud layer that sits behind its parent's content. Render the
